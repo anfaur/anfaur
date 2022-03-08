@@ -10,7 +10,7 @@
   
 <body> 
 
-    <input type="file" accept="txt" name="inputfile"
+    <input type="file" accept=".txt" name="inputfile"
 
             id="inputfile"> 
 
@@ -37,7 +37,15 @@
                 document.getElementById('output') 
 
                         .textContent=fr.result; 
-
+const myArray = fr.result.split("\n");
+var startline = 0;
+for(var i=0; i<myaArray.length; i++)
+{
+if(myArray[i].indexOf("const") >= 0)
+{
+startline=i;
+}
+}
             } 
 
               
